@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--! For to-do !-->
+    <!-- <div class="todo-container">
+        <h1>To Do List</h1>
+        <div class="input-group">
+            <input type="text" id="input-box" placeholder="Enter your task">
+            <button id="add-task" onclick="addTask()">Add</button>
+            <button id="updateTask" onclick="updateTask()" style="display: none;">Update Task</button>
+        </div>
+        <p id="error"></p>
+        <ul id="list-container">
+        </ul>
+    </div> -->
+    <!--! For to-do !-->
+
+    <!--! For Fan -->
+
+    <!-- <div class="fan">
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="fan-body"></div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="on()">ON</button>
+        <button onclick="off()">OFF</button>
+        <button onclick="slow()">Slow</button>
+        <button onclick="fast()">Fast</button>
+    </div> -->
+
+    <!--! For Fan -->
+
+    <!--! For Digital-clock-->
+
+    <!-- <div class="container">
+        <h1>Clock</h1>
+        <div class="clock-container">
+            <span id="hour"></span>
+            <span>:</span>
+            <span id="min"></span>
+            <span>:</span>
+            <span id="sec"></span>
+            <span id="pm-am"></span>
+        </div>
+    </div> -->
+
+
+
+    <!--! For Digital-clock-->
+
+    <!--! For login-And-SignUp Form -->
+
+    <div class="button-container">
+        <button onclick="login()">
+            Login
+        </button>
+        <button onclick="signUp()">
+            Sign Up
+        </button>
+        <button onclick="result()">
+            Show Result
+        </button>
+    </div>
+
+    <!-- for login-form -->
+    <form class="login-form" id="loginForm" onsubmit="completeLogin(event)">
+        <span onclick="closeLogin()">X</span>
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="login-name">UserName</label>
+            <input type="text" id="login-name" placeholder="Enter your userName">
+        </div>
+        <div class="input-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Enter your Email">
+        </div>
+        <div class="input-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your Password">
+        </div>
+        <div class="error-container">
+            <p id="login-error"></p>
+        </div>
+        <button type="submit" id="login">Login</button>
+    </form>
+    <!-- for login-form -->
+
+    <!-- for sign-up form -->
+    <form class="signUp-form" onsubmit="checkForError(event)" id="signUp-form">
+        <span onclick="closeSignUp()">X</span>
+        <h2>SignUp</h2>
+        <div class="input-group">
+            <label for="signUp-name">UserName</label>
+            <input type="text" id="signUp-name" placeholder="Enter your userName">
+        </div>
+        <div class="input-group">
+            <label for="signUp-email">Email</label>
+            <input type="email" id="signUp-email" placeholder="Enter your Email">
+        </div>
+        <div class="input-group">
+            <label for="signUp-password">Password</label>
+            <input type="password" id="signUp-password" placeholder="Enter your Password">
+            <i class="fas fa-eye-slash" onclick="hide()" id="eye-close"></i>
+            <i class="fas fa-eye" style="display: none;" id="eye-open" onclick="show()"></i>
+        </div>
+        <div class="input-group">
+            <label for="repeat-password">Confirm Password</label>
+            <input type="password" id="repeat-password" placeholder="Confirm Password">
+        </div>
+        <div class="error-container">
+            <p id="signUp-error"></p>
+        </div>
+        <button type="submit" id="signUp">Sign Up</button>
+    </form>
+    <!-- for sign-up form -->
+
+    <!-- for result -->
+    <form class="result-form" id="resultForm">
+        <span onclick="closeResult()">X</span>
+        <h2>Details</h2>
+        <div class="input-group">
+            <label>UserName</label>
+            <input type="text" id="result-name" readonly>
+        </div>
+        <div class="input-group">
+            <label>Email</label>
+            <input type="text" id="result-email" readonly>
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="text" id="result-password" readonly>
+        </div>
+    </form>
+
+    <!-- for result -->
+
+    <!-- for overlay -->
+
+    <div class="overlay"></div>
+    <!-- for overlay -->
+    <!--! For For login-And-SignUp Form -->
+
+
+</body>
+<script src="./assets/js/app.js"></script>
+
+</html>

@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/*! For to-do */
+/* body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(255, 81, 0),orange);
+}
+
+.todo-container{
+    background-color: white;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.todo-container h1{
+    margin-bottom: 20px;
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(255, 115, 0);
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #808080d0;
+    border-radius: 20px;
+}
+
+.input-group input{
+    flex: 1;
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+}
+
+.input-group button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: rgb(255, 157, 0);
+    cursor: pointer;
+}
+
+.todo-container p{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 15px;
+    color: red;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+::placeholder{
+    color: white;
+}
+
+#list-container{
+    text-align: left;
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#list-container li{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#list-container li span{
+    flex: 1;
+}
+
+#list-container li button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#list-container li #Remove{
+    background-color: red;
+}
+
+#list-container li #edit{
+    background-color: blue;
+    margin-left: 10px;
+} */
+
+/*! For to-do */
+
+
+/*! For Fan  */
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;   
+}
+
+.fan {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    animation-duration: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.blade {
+    position: absolute;
+    width: 220px;
+    height: 100px;
+    background-color: black;
+    border-radius: 0 200px 160px 360px;
+    top: 35%;
+    left: 35%;
+}
+
+.blade:nth-child(1) {
+    top: 245px;
+    left: 280px;
+}
+
+.blade:nth-child(2) {
+    transform: rotate(120deg);
+    top: 295px;
+    left: 25px;
+}
+
+.blade:nth-child(3) {
+    transform: rotate(240deg);
+    top: 65px;
+    left: 100px;
+}
+
+.fan-body {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    background-color: red;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5%;
+}
+
+.buttons button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+}
+
+.buttons button:nth-child(1) {
+    background-color: green;
+}
+
+.buttons button:nth-child(2) {
+    background-color: red;
+}
+
+.buttons button:nth-child(3) {
+    background-color: brown;
+}
+
+.buttons button:nth-child(4) {
+    background-color: blue;
+} */
+
+
+/*! For Fan  */
+
+
+/*! For Digital-clock*/
+
+/* .container{
+    height: 100vh;
+    width: 100%;
+    background-color: #4158D0;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.container h1{
+    text-align: center;
+    padding-top: 130px;
+    color:white;
+    font-size: 50px;
+}
+
+.clock-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 30px;
+}
+
+.clock-container span{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+#pm-am{
+    font-family: sans-serif;
+    margin-left: 10px;
+}
+
+@media (max-width:767px) {
+    .container h1{
+        font-size: 40px;
+    }
+    .clock-container span{
+        font-size: 20px;
+    }
+} */
+
+/*! For Digital-clock*/
+
+/*! For login-And-SignUp Form */
+
+body {
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    height: 100vh;
+    z-index: -1;
+}
+
+/* for login form */
+
+.login-form,
+.signUp-form,
+.result-form {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    z-index: 3;
+    transition: all 1.5s;
+}
+
+.result-form {
+    max-width: 500px;
+}
+
+.login-form h2,
+.signUp-form h2,
+.result-form h2 {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.login-form .input-group,
+.signUp-form .input-group,
+.result-form .input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: transparent;
+}
+
+.login-form .input-group label,
+.signUp-form .input-group label,
+.result-form .input-group label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-form .input-group input,
+.signUp-form .input-group input,
+.result-form .input-group input {
+    padding: 10px 5px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    background: transparent;
+}
+
+#login,
+#signUp {
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    background: transparent;
+    overflow: hidden;
+    border: 1px solid black;
+    color: black;
+    transition: all 0.7s;
+    position: relative;
+    z-index: 2;
+}
+
+#login:hover,
+#signUp:hover {
+    color: white;
+    box-shadow: 0 0 5px black, 0 0 15px black;
+}
+
+#login::after,
+#signUp::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 50% 50%);
+    background: black;
+    transition: all 0.7s;
+    z-index: -1;
+}
+
+#login:hover::after,
+#signUp:hover::after {
+    clip-path: circle(100% at 50% 50%);
+}
+
+.login-form span,
+.signUp-form span,
+.result-form span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    border-bottom-left-radius: 2px;
+    transition: all 0.5s;
+}
+
+.login-form span:hover,
+.signUp-form span:hover,
+.result-form span:hover {
+    box-shadow: 0 0 5px red, 0 0 10px red;
+}
+
+@media (max-width:425px) {
+
+    .login-form,
+    .signUp-form,
+    .result-form {
+        padding: 10px;
+    }
+
+    .login-form h2,
+    .signUp-form h2,
+    .result-form h2 {
+        font-size: 30px;
+    }
+
+    .login-form .input-group label,
+    .signUp-form .input-group label,
+    .result-form .input-group label {
+        font-size: 17px;
+    }
+
+    .login-form .input-group input,
+    .signUp-form .input-group input,
+    .result-form .input-group input {
+        font-size: 16px;
+    }
+}
+
+/* for login form */
+
+/* for buttons */
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.button-container button {
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    background: transparent;
+    overflow: hidden;
+    border: 1px solid black;
+    color: white;
+    transition: all 0.7s;
+    position: relative;
+    z-index: 2;
+}
+
+.button-container button:hover {
+    color: black;
+    box-shadow: 0 0 10px white, 0 0 50px white;
+}
+
+.button-container button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 50% 50%);
+    background: white;
+    transition: all 0.7s;
+    z-index: -1;
+}
+
+.button-container button:hover::after {
+    clip-path: circle(100% at 50% 50%);
+}
+
+@media (max-width:550px) {
+    .button-container {
+        gap: 10px;
+    }
+
+    .button-container button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
+
+/* for button */
+
+/* for eye-icon */
+
+.signUp-form .input-group {
+    position: relative;
+}
+
+.signUp-form .input-group i {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    right: 6px;
+    font-size: 17px;
+}
+
+/* for eye-icon */
+
+/* for error */
+
+.error-container {
+    height: 30px;
+}
+
+#login-error,
+#signUp-error {
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* for error */
+
+/* for overlay */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.436);
+    z-index: 2;
+    transition: all 1s;
+}
+
+
+/* for overlay */
+
+/*! For login-And-SignUp Form */
