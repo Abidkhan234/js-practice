@@ -126,203 +126,261 @@
 
 //! For login-And-SignUp Form
 
-var loginForm = document.getElementById("loginForm");
+// var loginForm = document.getElementById("loginForm");
 
-var signUpForm = document.getElementById("signUp-form");
+// var signUpForm = document.getElementById("signUp-form");
 
-var overlay = document.querySelector(".overlay");
+// var overlay = document.querySelector(".overlay");
 
-// to show modal
+// // to show modal
 
-var login = () => {
-    loginForm.style.top = "50%";
-    overlay.style.width = "100%";
-}
+// var login = () => {
+//     loginForm.style.top = "50%";
+//     overlay.style.width = "100%";
+// }
 
-var closeLogin = () => {
-    loginForm.style.top = "-50%";
-    overlay.style.width = "0%";
-}
+// var closeLogin = () => {
+//     loginForm.style.top = "-50%";
+//     overlay.style.width = "0%";
+// }
 
-var signUp = () => {
-    signUpForm.style.top = "50%";
-    overlay.style.width = "100%";
-}
+// var signUp = () => {
+//     signUpForm.style.top = "50%";
+//     overlay.style.width = "100%";
+// }
 
-var closeSignUp = () => {
-    signUpForm.style.top = "-50%";
-    overlay.style.width = "0%";
-}
+// var closeSignUp = () => {
+//     signUpForm.style.top = "-50%";
+//     overlay.style.width = "0%";
+// }
 
-// to show modal
+// // to show modal
 
-// to show/hide password
+// // to show/hide password
 
-var eyeClose = document.getElementById("eye-close");
+// var eyeClose = document.getElementById("eye-close");
 
-var eyeOpen = document.getElementById("eye-open");
+// var eyeOpen = document.getElementById("eye-open");
 
-var signUpPassword = document.getElementById("signUp-password");
+// var signUpPassword = document.getElementById("signUp-password");
 
-var hide = () => {
-    signUpPassword.type = "text";
-    eyeClose.style.display = "none";
-    eyeOpen.style.display = "inline";
-}
+// var hide = () => {
+//     signUpPassword.type = "text";
+//     eyeClose.style.display = "none";
+//     eyeOpen.style.display = "inline";
+// }
 
-var show = () => {
-    signUpPassword.type = "password";
-    eyeClose.style.display = "inline";
-    eyeOpen.style.display = "none";
-}
+// var show = () => {
+//     signUpPassword.type = "password";
+//     eyeClose.style.display = "inline";
+//     eyeOpen.style.display = "none";
+// }
 
-// to show/hide password
+// // to show/hide password
 
-// for signUp-Form
+// // for signUp-Form
 
-var signUpRepeatPassword = document.getElementById("repeat-password");
+// var signUpRepeatPassword = document.getElementById("repeat-password");
 
-var signUpName = document.getElementById("signUp-name");
+// var signUpName = document.getElementById("signUp-name");
 
-var signUpEmail = document.getElementById("signUp-email");
+// var signUpEmail = document.getElementById("signUp-email");
 
-var signUpError = document.getElementById("signUp-error");
+// var signUpError = document.getElementById("signUp-error");
 
-var checkForError = (e) => {
+// var checkForError = (e) => {
 
-    var message = [];
+//     var message = [];
 
-    if (signUpName.value === "") {
-        message.push("User name is mandatory");
-    } else if (signUpEmail.value === "") {
-        message.push("Email is mandatory");
-    } else if (signUpPassword.value === "") {
-        message.push("Password is mandatory");
-    } else if (signUpPassword.value.length < 6) {
-        message.push("Password must be 6 character long");
-    } else if (signUpRepeatPassword.value.length === 0) {
-        message.push("Confirm password is mandatory");
-    } else if (signUpPassword.value !== signUpRepeatPassword.value) {
-        message.push("Confirm password is incorrect!");
-    }
+//     if (signUpName.value === "") {
+//         message.push("User name is mandatory");
+//     } else if (signUpEmail.value === "") {
+//         message.push("Email is mandatory");
+//     } else if (signUpPassword.value === "") {
+//         message.push("Password is mandatory");
+//     } else if (signUpPassword.value.length < 6) {
+//         message.push("Password must be 6 character long");
+//     } else if (signUpRepeatPassword.value.length === 0) {
+//         message.push("Confirm password is mandatory");
+//     } else if (signUpPassword.value !== signUpRepeatPassword.value) {
+//         message.push("Confirm password is incorrect!");
+//     }
 
-    if (message.length > 0) {
-        e.preventDefault();
-        message.forEach((value) => {
-            signUpError.innerHTML = value;
-        });
-    }
-}
+//     if (message.length > 0) {
+//         e.preventDefault();
+//         message.forEach((value) => {
+//             signUpError.innerHTML = value;
+//         });
+//     }
+// }
 
-// for signUp-Form
+// // for signUp-Form
 
-// To store sign-up value in local storage
+// // To store sign-up value in local storage
 
-function saveToLocalStorage() {
-    localStorage.setItem("signUpName", signUpName.value);
-    localStorage.setItem("signUpEmail", signUpEmail.value);
-    localStorage.setItem("signUpPassword", signUpPassword.value);
-}
+// function saveToLocalStorage() {
+//     localStorage.setItem("signUpName", signUpName.value);
+//     localStorage.setItem("signUpEmail", signUpEmail.value);
+//     localStorage.setItem("signUpPassword", signUpPassword.value);
+// }
 
-signUpName.addEventListener("input", saveToLocalStorage);
-signUpEmail.addEventListener("input", saveToLocalStorage);
-signUpPassword.addEventListener("input", saveToLocalStorage);
+// signUpName.addEventListener("input", saveToLocalStorage);
+// signUpEmail.addEventListener("input", saveToLocalStorage);
+// signUpPassword.addEventListener("input", saveToLocalStorage);
 
-document.addEventListener("DOMContentLoaded", function () {
-    if (localStorage.getItem("signUpName")) {
-        signUpName.value = localStorage.getItem("signUpName");
-    }
-    if (localStorage.getItem("signUpEmail")) {
-        signUpEmail.value = localStorage.getItem("signUpEmail");
-    }
-    if (localStorage.getItem("signUpPassword")) {
-        signUpPassword.value = localStorage.getItem("signUpPassword");
-    }
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     if (localStorage.getItem("signUpName")) {
+//         signUpName.value = localStorage.getItem("signUpName");
+//     }
+//     if (localStorage.getItem("signUpEmail")) {
+//         signUpEmail.value = localStorage.getItem("signUpEmail");
+//     }
+//     if (localStorage.getItem("signUpPassword")) {
+//         signUpPassword.value = localStorage.getItem("signUpPassword");
+//     }
+// });
 
-// To store sign-up value in local storage
+// // To store sign-up value in local storage
 
-// for result
+// // for result
 
-var resultForm = document.getElementById("resultForm");
+// var resultForm = document.getElementById("resultForm");
 
-var resultName = document.getElementById("result-name");
+// var resultName = document.getElementById("result-name");
 
-var resultEmail = document.getElementById("result-email");
+// var resultEmail = document.getElementById("result-email");
 
-var resultPassword = document.getElementById("result-password");
+// var resultPassword = document.getElementById("result-password");
 
 
-var result = () => {
-    resultForm.style.top = "50%";
+// var result = () => {
+//     resultForm.style.top = "50%";
 
-    resultName.value = signUpName.value;
+//     resultName.value = signUpName.value;
 
-    resultEmail.value = signUpEmail.value;
+//     resultEmail.value = signUpEmail.value;
 
-    resultPassword.value = signUpPassword.value;
+//     resultPassword.value = signUpPassword.value;
 
-    overlay.style.width = "100%";
-};
+//     overlay.style.width = "100%";
+// };
 
-var closeResult = () => {
-    resultForm.style.top = "-50%";
-    overlay.style.width = "0%";
-};
+// var closeResult = () => {
+//     resultForm.style.top = "-50%";
+//     overlay.style.width = "0%";
+// };
 
-// for result
+// // for result
 
-// for login
+// // for login
 
-var loginName = document.getElementById("login-name");
+// var loginName = document.getElementById("login-name");
 
-var loginEmail = document.getElementById("login-email");
+// var loginEmail = document.getElementById("login-email");
 
-var loginPassword = document.getElementById("login-password");
+// var loginPassword = document.getElementById("login-password");
 
-var loginError = document.getElementById("login-error");
+// var loginError = document.getElementById("login-error");
 
-var completeLogin = (e) => {
+// var completeLogin = (e) => {
 
-    var message = [];
-    if (loginName.value === "") {
-        message.push("Username is mandatory");
-    } else if (loginName.value !== signUpName.value) {
-        message.push("Incorrect Username");
-    }
+//     var message = [];
+//     if (loginName.value === "") {
+//         message.push("Username is mandatory");
+//     } else if (loginName.value !== signUpName.value) {
+//         message.push("Incorrect Username");
+//     }
 
-    else if (loginEmail.value === "") {
-        message.push("Email is mandatory");
-    } else if (loginEmail.value !== signUpEmail.value) {
-        message.push("Incorrect Email");
-    }
+//     else if (loginEmail.value === "") {
+//         message.push("Email is mandatory");
+//     } else if (loginEmail.value !== signUpEmail.value) {
+//         message.push("Incorrect Email");
+//     }
 
-    else if (loginPassword.value === "") {
-        message.push("Password is mandatory");
-    } else if (loginPassword.value !== signUpPassword.value) {
-        message.push("Incorrect Password");
-    }
+//     else if (loginPassword.value === "") {
+//         message.push("Password is mandatory");
+//     } else if (loginPassword.value !== signUpPassword.value) {
+//         message.push("Incorrect Password");
+//     }
 
-    if (message.length > 0) {
-        e.preventDefault();
-        message.forEach((value) => {
-            loginError.innerHTML = value;
-        });
-    } else {
-        alert("You are now logged In");
+//     if (message.length > 0) {
+//         e.preventDefault();
+//         message.forEach((value) => {
+//             loginError.innerHTML = value;
+//         });
+//     } else {
+//         alert("You are now logged In");
 
-        localStorage.removeItem("signUPName");
-        localStorage.removeItem("signUPEmail");
-        localStorage.removeItem("signUPPassword");
+//         localStorage.removeItem("signUPName");
+//         localStorage.removeItem("signUPEmail");
+//         localStorage.removeItem("signUPPassword");
 
-        localStorage.clear();
-        
-        signUpName.value = "";
-        signUpEmail.value = "";
-        signUpPassword.value = "";
-    }
-}
+//         localStorage.clear();
+
+//         signUpName.value = "";
+//         signUpEmail.value = "";
+//         signUpPassword.value = "";
+//     }
+// }
 
 // for login
 
 //! For login-And-SignUp Form
+
+
+//! For random color generator
+
+var colorCode = document.querySelectorAll(".color-code");
+
+var colorDisplay = document.querySelectorAll(".color-display");
+
+var colorBox = document.querySelectorAll(".color-box");
+
+var refresh = () => {
+    var hexValues = [];
+    var hexcode;
+    colorDisplay.forEach((value, index) => {
+
+        hexcode = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+        value.style.backgroundColor = hexcode;
+
+        colorCode[index].innerHTML = hexcode;
+
+        hexValues.push(hexcode);
+    });
+
+    localStorage.setItem("hexColors", JSON.stringify(hexValues));
+}
+
+var loadColors = () => {
+    const savedColors = JSON.parse(localStorage.getItem("hexColors"));
+
+    if (savedColors && savedColors.length === colorDisplay.length) {
+        // Apply saved colors to the displays and codes
+        colorDisplay.forEach((value, index) => {
+            value.style.backgroundColor = savedColors[index];
+            colorCode[index].innerHTML = savedColors[index];
+        });
+    } else {
+        // If no saved colors, generate new ones
+        refresh();
+    }
+};
+
+colorBox.forEach((box, index) => {
+    box.addEventListener("click", () => {
+        const hexValue = colorCode[index].innerHTML; // Get the hex code from the corresponding color-code
+        navigator.clipboard.writeText(hexValue) // Copy the hex code to the clipboard
+            .then(() => {
+                alert(`Copied Successfully!`); // Notify the user
+            })
+            .catch((err) => {
+                console.error("Failed to copy!", err); 
+            });
+    });
+});
+
+loadColors();
+
+//! For random color generator
