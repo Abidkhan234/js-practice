@@ -330,57 +330,215 @@
 
 //! For random color generator
 
-var colorCode = document.querySelectorAll(".color-code");
+// var colorCode = document.querySelectorAll(".color-code");
 
-var colorDisplay = document.querySelectorAll(".color-display");
+// var colorDisplay = document.querySelectorAll(".color-display");
 
-var colorBox = document.querySelectorAll(".color-box");
+// var colorBox = document.querySelectorAll(".color-box");
 
-var refresh = () => {
-    var hexValues = [];
-    var hexcode;
-    colorDisplay.forEach((value, index) => {
+// var refresh = () => {
+//     var hexValues = [];
+//     var hexcode;
+//     colorDisplay.forEach((value, index) => {
 
-        hexcode = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+//         hexcode = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
-        value.style.backgroundColor = hexcode;
+//         value.style.backgroundColor = hexcode;
 
-        colorCode[index].innerHTML = hexcode;
+//         colorCode[index].innerHTML = hexcode;
 
-        hexValues.push(hexcode);
-    });
+//         hexValues.push(hexcode);
+//     });
 
-    localStorage.setItem("hexColors", JSON.stringify(hexValues));
-}
+//     localStorage.setItem("hexColors", JSON.stringify(hexValues));
+// }
 
-var loadColors = () => {
-    const savedColors = JSON.parse(localStorage.getItem("hexColors"));
+// var loadColors = () => {
+//     const savedColors = JSON.parse(localStorage.getItem("hexColors"));
 
-    if (savedColors && savedColors.length === colorDisplay.length) {
-        // Apply saved colors to the displays and codes
-        colorDisplay.forEach((value, index) => {
-            value.style.backgroundColor = savedColors[index];
-            colorCode[index].innerHTML = savedColors[index];
-        });
-    } else {
-        // If no saved colors, generate new ones
-        refresh();
-    }
-};
+//     if (savedColors && savedColors.length === colorDisplay.length) {
+//         // Apply saved colors to the displays and codes
+//         colorDisplay.forEach((value, index) => {
+//             value.style.backgroundColor = savedColors[index];
+//             colorCode[index].innerHTML = savedColors[index];
+//         });
+//     } else {
+//         // If no saved colors, generate new ones
+//         refresh();
+//     }
+// };
 
-colorBox.forEach((box, index) => {
-    box.addEventListener("click", () => {
-        const hexValue = colorCode[index].innerHTML; // Get the hex code from the corresponding color-code
-        navigator.clipboard.writeText(hexValue) // Copy the hex code to the clipboard
-            .then(() => {
-                alert(`Copied Successfully!`); // Notify the user
-            })
-            .catch((err) => {
-                console.error("Failed to copy!", err); 
-            });
-    });
-});
+// colorBox.forEach((box, index) => {
+//     box.addEventListener("click", () => {
+//         const hexValue = colorCode[index].innerHTML; // Get the hex code from the corresponding color-code
+//         navigator.clipboard.writeText(hexValue) // Copy the hex code to the clipboard
+//             .then(() => {
+//                 alert(`Copied Successfully!`); // Notify the user
+//             })
+//             .catch((err) => {
+//                 console.error("Failed to copy!", err); 
+//             });
+//     });
+// });
 
-loadColors();
+// loadColors();
 
 //! For random color generator
+
+//! For local-storage practice
+
+// var userName = document.getElementById("user-name");
+
+// var userEmail = document.getElementById("user-email");
+
+// var userPassword = document.getElementById("user-password");
+
+// var result = document.getElementById("result");
+
+
+
+// var saveData = () => {
+
+//     if (userName.value === "") {
+//         alert("Name is mandatory")
+//         return
+//     } else if (userEmail.value === "") {
+//         alert("Email is mandatory")
+//         return
+//     } else if (userPassword.value === "") {
+//         alert("Password is mandatory")
+//         return
+//     } else {
+
+//         localStorage.setItem("userName", userName.value);
+//         localStorage.setItem("userEmail", userEmail.value);
+//         localStorage.setItem("userPassword", userPassword.value);
+
+//         result.innerHTML = `Name: ${localStorage.getItem("userName")} <br> Email: ${localStorage.getItem("userEmail")} <br> Passowrd: ${localStorage.getItem("userPassword")}`;
+
+//         if (result.innerHTML !== "") {
+//             result.innerHTML += "<br>";
+//         }
+
+//     }
+
+//     userName.value = "";
+//     userEmail.value = "";
+//     userPassword.value = "";
+// }
+
+// var clearData = () => {
+//     result.innerHTML = "";
+//     localStorage.clear();
+// }
+
+//!For local-storage practice
+
+//! For Quiz Practice
+
+// const simpleQuestions = [
+//     {
+//         question: "What is the capital of France?",
+//         options: ["Paris", "London", "Berlin", "Madrid"],
+//         correctAnswer: "Paris"
+//     },
+//     {
+//         question: "Which planet is known as the Red Planet?",
+//         options: ["Earth", "Mars", "Jupiter", "Saturn"],
+//         correctAnswer: "Mars"
+//     },
+//     {
+//         question: "What is the largest mammal in the world?",
+//         options: ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+//         correctAnswer: "Blue Whale"
+//     },
+//     {
+//         question: "Which language is primarily used for web development?",
+//         options: ["Python", "Java", "JavaScript", "C++"],
+//         correctAnswer: "JavaScript"
+//     },
+//     {
+//         question: "Who wrote 'Romeo and Juliet'?",
+//         options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+//         correctAnswer: "William Shakespeare"
+//     }
+// ];
+
+// const quizQuestion = document.getElementById("quiz-question");
+
+// const quizOptions = document.querySelectorAll(".ans");
+
+// const quizModal = document.getElementById("quiz-modal");
+
+// const quizScoreModal = document.getElementById("quiz-score-modal");
+
+// const quizScoreSpan = document.getElementById("quiz-score");
+
+// let quizQuestionIndex = 0;
+
+// let quizScore = 0;
+
+// let checker = (userInput) => {
+//     let userSelect = userInput.innerText;
+//     let correctAnswer = simpleQuestions[quizQuestionIndex].correctAnswer;
+
+//     if (userSelect === correctAnswer) {
+//         userInput.classList.add("correct");
+//         quizScore++;
+//     } else {
+//         userInput.classList.add("incorrect");
+//     }
+
+//     quizOptions.forEach((element) => {
+//         if (element.innerText === correctAnswer) {
+//             element.classList.add("correct");
+//         }
+        
+//         element.style.pointerEvents = "none";
+//     });
+// };
+
+
+// let showFirstQuestion = () => {
+
+//     quizQuestion.innerText = `Qno${quizQuestionIndex + 1}. ${simpleQuestions[quizQuestionIndex].question}`;
+
+//     quizOptions.forEach((btn, index) => {
+//         btn.innerText = simpleQuestions[quizQuestionIndex].options[index];
+//     })
+// }
+
+// let next = () => {
+
+//     quizScoreSpan.innerText = quizScore;
+
+//     quizQuestionIndex++;
+
+//     if (quizQuestionIndex === simpleQuestions.length) {
+
+//         quizScoreModal.style.top = "50%";
+//         quizModal.style.display = "none";
+
+//         return;
+//     }
+
+//     quizQuestion.innerText = `Qno${quizQuestionIndex + 1}. ${simpleQuestions[quizQuestionIndex].question}`;
+
+//     quizOptions.forEach((btn, index) => {
+//         btn.innerText = simpleQuestions[quizQuestionIndex].options[index];
+//     })
+
+//     quizOptions.forEach((btn)=>{
+//         btn.classList.remove("correct");
+//         btn.classList.remove("incorrect");
+//         btn.style.pointerEvents = "";
+//     })
+// }
+
+// const closeScoreModal = () => {
+//     location.reload();
+// }
+
+// showFirstQuestion();
+
+//! For Quiz Practice

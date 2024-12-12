@@ -550,7 +550,7 @@ body {
 
 /*! For random color generator */
 
-body{
+/* body{
     background-color: #e3f2fd;
     padding: 10px;
 }
@@ -609,6 +609,210 @@ body{
     .display{
         display: none;
     }
-}
+} */
 
 /*! For random color generator */
+
+/*! For local-storage practice  */
+
+/* .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10px;
+}
+
+.user-input{
+    width: 50%;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.user-input .input-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.user-input .input-field input{
+    padding: 10px 5px;
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+}
+
+.user-input .input-field label{
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.user-input button{
+    border: 1px solid black;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-data{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-data p{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user-data button{
+    border: 1px solid black;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width:992px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .user-input,.user-data{
+        width: 100%;
+    }
+    .user-data{
+        padding: 10px;
+    }
+} */
+
+/*! For local-storage practice  */
+
+/*! For Quiz Practice */
+
+/* body {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.quiz-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quiz-modal h2 {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+}
+
+.quiz-modal .quiz-question h5 {
+    font-size: 18px;
+    text-align: left;
+}
+
+.quiz-modal .quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quiz-modal .quiz-options button {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid gray;
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.quiz-modal .quiz-options button.incorrect {
+    background-color: red;
+    color: white;
+}
+
+.quiz-modal .quiz-options button.correct {
+    background-color: green;
+    color: white;
+}
+
+.quiz-modal .quiz-btn button {
+    padding: 5px 40px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: rgb(17, 24, 212);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+
+/* For quiz score modal */
+/* 
+.quiz-score-modal {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.quiz-score-modal .quiz-score-cross{
+    padding: 4px 8px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.quiz-score-heading h2{
+    font-size: 25px;
+    border-bottom: 1px solid black;
+}
+
+.quiz-score-content p{
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 10px;
+} */
+
+/* For quiz score modal */
+
+/*! For Quiz Practice */
