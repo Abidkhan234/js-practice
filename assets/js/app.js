@@ -493,7 +493,7 @@
 //         if (element.innerText === correctAnswer) {
 //             element.classList.add("correct");
 //         }
-        
+
 //         element.style.pointerEvents = "none";
 //     });
 // };
@@ -542,3 +542,83 @@
 // showFirstQuestion();
 
 //! For Quiz Practice
+
+//! For JS method practice
+
+let inputBox = document.getElementById("input-box");
+
+let list = document.getElementById("list");
+
+let editTaskBtn = document.getElementById("editTask");
+
+let addTaskBtn = document.getElementById("addTask");
+
+let paraValue;
+
+const appendingElement = () => {
+
+    let li = document.createElement("li");
+    let para = document.createElement("p");
+    let delBtn = document.createElement("span");
+    let editBtn = document.createElement("span");
+
+    editBtn.setAttribute("class", "edit")
+
+    para.innerText = inputBox.value;
+
+    delBtn.innerText = "X";
+
+    editBtn.innerText = "Edit";
+
+    li.appendChild(para);
+    li.appendChild(delBtn);
+    li.appendChild(editBtn);
+
+    list.appendChild(li);
+
+    delBtn.onclick = (e) => {
+        e.target.parentElement.remove();
+    }
+
+    editBtn.onclick = () => {
+        inputBox.value = para.innerText;
+        inputBox.focus();
+        addTaskBtn.style.display = "none";
+        editTaskBtn.style.display = "inline";
+        paraValue = para;
+    }
+}
+
+const addTask = () => {
+
+    if (inputBox.value === "") {
+        alert("Plase enter a task");
+        return;
+    } else {
+        appendingElement();
+    }
+
+    inputBox.value = "";
+};
+
+const editTask = () => {
+
+    if (list.childElementCount === 0) {
+        addTaskBtn.style.display = "inline";
+        editTaskBtn.style.display = "none";
+        inputBox.focus();
+        inputBox.value = "";
+    } else if (inputBox.value === "") {
+        alert("Plase enter a task");
+        return;
+    } else {
+        paraValue.innerText = inputBox.value;
+    }
+
+    paraValue = null;
+    addTaskBtn.style.display = "inline";
+    editTaskBtn.style.display = "none";
+    inputBox.value = "";
+};
+
+//! For JS method practice 
