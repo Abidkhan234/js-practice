@@ -545,80 +545,83 @@
 
 //! For JS method practice
 
-let inputBox = document.getElementById("input-box");
+// let inputBox = document.getElementById("input-box");
 
-let list = document.getElementById("list");
+// let list = document.getElementById("list");
 
-let editTaskBtn = document.getElementById("editTask");
+// let editTaskBtn = document.getElementById("editTask");
 
-let addTaskBtn = document.getElementById("addTask");
+// let addTaskBtn = document.getElementById("addTask");
 
-let paraValue;
+// let paraValue;
 
-const appendingElement = () => {
+// const appendingElement = () => {
 
-    let li = document.createElement("li");
-    let para = document.createElement("p");
-    let delBtn = document.createElement("span");
-    let editBtn = document.createElement("span");
+//     let li = document.createElement("li");
+//     let para = document.createElement("p");
+//     let delBtn = document.createElement("span");
+//     let editBtn = document.createElement("span");
 
-    editBtn.setAttribute("class", "edit")
+//     editBtn.setAttribute("class", "edit")
 
-    para.innerText = inputBox.value;
+//     para.innerText = inputBox.value;
 
-    delBtn.innerText = "X";
+//     delBtn.innerText = "X";
 
-    editBtn.innerText = "Edit";
+//     editBtn.innerText = "Edit";
 
-    li.appendChild(para);
-    li.appendChild(delBtn);
-    li.appendChild(editBtn);
+//     li.appendChild(para);
+//     li.appendChild(delBtn);
+//     li.appendChild(editBtn);
 
-    list.appendChild(li);
+//     list.appendChild(li);
 
-    delBtn.onclick = (e) => {
-        e.target.parentElement.remove();
-    }
+//     delBtn.onclick = () => {
+//         li.remove();
+//     }
 
-    editBtn.onclick = () => {
-        inputBox.value = para.innerText;
-        inputBox.focus();
-        addTaskBtn.style.display = "none";
-        editTaskBtn.style.display = "inline";
-        paraValue = para;
-    }
-}
+//     editBtn.onclick = () => {
+//         inputBox.value = para.innerText;
+//         inputBox.focus();
+//         addTaskBtn.style.display = "none";
+//         editTaskBtn.style.display = "inline";
+//         paraValue = para;
+//     }
+// }
 
-const addTask = () => {
+// const addTask = () => {
 
-    if (inputBox.value === "") {
-        alert("Plase enter a task");
-        return;
-    } else {
-        appendingElement();
-    }
+//     if (inputBox.value === "") {
+//         alert("Plase enter a task");
+//         return;
+//     } else {
+//         appendingElement();
+//     }
 
-    inputBox.value = "";
-};
+//     inputBox.value = "";
+// };
 
-const editTask = () => {
+// const editTask = () => {
 
-    if (list.childElementCount === 0) {
-        addTaskBtn.style.display = "inline";
-        editTaskBtn.style.display = "none";
-        inputBox.focus();
-        inputBox.value = "";
-    } else if (inputBox.value === "") {
-        alert("Plase enter a task");
-        return;
-    } else {
-        paraValue.innerText = inputBox.value;
-    }
+//     if (list.childElementCount === 0) {
+//         addTaskBtn.style.display = "inline";
+//         editTaskBtn.style.display = "none";
+//         inputBox.focus();
+//         inputBox.value = "";
+//     } else if (inputBox.value === "") {
+//         alert("Plase enter a task");
+//         return;
+//     } else {
+//         paraValue.innerText = inputBox.value;
+//     }
 
-    paraValue = null;
-    addTaskBtn.style.display = "inline";
-    editTaskBtn.style.display = "none";
-    inputBox.value = "";
-};
+
+
+//     paraValue = null;
+//     addTaskBtn.style.display = "inline";
+//     editTaskBtn.style.display = "none";
+//     inputBox.value = "";
+// };
 
 //! For JS method practice 
+
