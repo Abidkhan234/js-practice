@@ -625,3 +625,89 @@
 
 //! For JS method practice 
 
+//! For Crud Operation
+
+let userNameInput = document.getElementById("userName");
+let userEmailInput = document.getElementById("email");
+let userRollNoInput = document.getElementById("rollno");
+let list = document.getElementById("list");
+let message = [];
+let selectedRow = null;
+
+const appendingElement = () => {
+    // Validation
+    if (userNameInput.value === "") {
+        message.push("User Name is mandatory");
+        alert(message);
+        message = [];
+        return;
+    } else if (userEmailInput.value === "") {
+        message.push("Email is mandatory");
+        alert(message);
+        message = [];
+        return;
+    } else if (userRollNoInput.value === "") {
+        message.push("Roll No is mandatory");
+        alert(message);
+        message = [];
+        return;
+    }
+
+    if (document.getElementById("form-btn").innerText === "Save Changes" && selectedRow) {
+        // Update existing row
+        selectedRow.children[0].innerText = userNameInput.value;
+        selectedRow.children[1].innerText = userEmailInput.value;
+        selectedRow.children[2].innerText = userRollNoInput.value;
+
+        document.getElementById("form-btn").innerText = "Submit";
+        selectedRow = null; // Reset selected row
+    } else {
+        // Add new row
+        let tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td class="userNameResult">${userNameInput.value}</td>
+            <td class="userEmailResult">${userEmailInput.value}</td>
+            <td class="userRollNoResult">${userRollNoInput.value}</td>
+            <td>
+                <button class="btn btn-sm btn-warning fw-bold edit">Edit</button>
+                <button class="btn btn-sm btn-danger fw-bold delete">Delete</button>
+            </td>
+        `;
+
+        list.appendChild(tr);
+    }
+
+    // Clear input fields
+    userNameInput.value = "";
+    userEmailInput.value = "";
+    userRollNoInput.value = "";
+};
+
+list.addEventListener("click", (e) => {
+    let target = e.target;
+
+    // Delete row
+    if (target.classList.contains("delete")) {
+        target.parentElement.parentElement.remove();
+    }
+
+    // Edit row
+    if (target.classList.contains("edit")) {
+        selectedRow = target.parentElement.parentElement;
+
+        let userNameResult = selectedRow.children[0];
+        let userEmailResult = selectedRow.children[1];
+        let userRollNoResult = selectedRow.children[2];
+
+        userNameInput.value = userNameResult.innerText;
+        userEmailInput.value = userEmailResult.innerText;
+        userRollNoInput.value = userRollNoResult.innerText;
+
+        document.getElementById("form-btn").innerText = "Save Changes";
+    }
+});
+
+
+
+//! For Crud Operation 
