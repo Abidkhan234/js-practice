@@ -627,87 +627,144 @@
 
 //! For Crud Operation
 
-let userNameInput = document.getElementById("userName");
-let userEmailInput = document.getElementById("email");
-let userRollNoInput = document.getElementById("rollno");
-let list = document.getElementById("list");
-let message = [];
-let selectedRow = null;
+// let userNameInput = document.getElementById("userName");
+// let userEmailInput = document.getElementById("email");
+// let userRollNoInput = document.getElementById("rollno");
+// let list = document.getElementById("list");
+// let message = [];
+// let selectedRow = null;
 
-const appendingElement = () => {
-    // Validation
-    if (userNameInput.value === "") {
-        message.push("User Name is mandatory");
-        alert(message);
-        message = [];
-        return;
-    } else if (userEmailInput.value === "") {
-        message.push("Email is mandatory");
-        alert(message);
-        message = [];
-        return;
-    } else if (userRollNoInput.value === "") {
-        message.push("Roll No is mandatory");
-        alert(message);
-        message = [];
-        return;
-    }
+// const appendingElement = () => {
+//     // Validation
+//     if (userNameInput.value === "") {
+//         message.push("User Name is mandatory");
+//         alert(message);
+//         message = [];
+//         return;
+//     } else if (userEmailInput.value === "") {
+//         message.push("Email is mandatory");
+//         alert(message);
+//         message = [];
+//         return;
+//     } else if (userRollNoInput.value === "") {
+//         message.push("Roll No is mandatory");
+//         alert(message);
+//         message = [];
+//         return;
+//     }
 
-    if (document.getElementById("form-btn").innerText === "Save Changes" && selectedRow) {
-        // Update existing row
-        selectedRow.children[0].innerText = userNameInput.value;
-        selectedRow.children[1].innerText = userEmailInput.value;
-        selectedRow.children[2].innerText = userRollNoInput.value;
+//     if (document.getElementById("form-btn").innerText === "Save Changes" && selectedRow) {
+//         // Update existing row
+//         selectedRow.children[0].innerText = userNameInput.value;
+//         selectedRow.children[1].innerText = userEmailInput.value;
+//         selectedRow.children[2].innerText = userRollNoInput.value;
 
-        document.getElementById("form-btn").innerText = "Submit";
-        selectedRow = null; // Reset selected row
-    } else {
-        // Add new row
-        let tr = document.createElement("tr");
+//         document.getElementById("form-btn").innerText = "Submit";
+//         selectedRow = null; // Reset selected row
+//     } else {
+//         // Add new row
+//         let tr = document.createElement("tr");
 
-        tr.innerHTML = `
-            <td class="userNameResult">${userNameInput.value}</td>
-            <td class="userEmailResult">${userEmailInput.value}</td>
-            <td class="userRollNoResult">${userRollNoInput.value}</td>
-            <td>
-                <button class="btn btn-sm btn-warning fw-bold edit">Edit</button>
-                <button class="btn btn-sm btn-danger fw-bold delete">Delete</button>
-            </td>
-        `;
+//         tr.innerHTML = `
+//             <td class="userNameResult">${userNameInput.value}</td>
+//             <td class="userEmailResult">${userEmailInput.value}</td>
+//             <td class="userRollNoResult">${userRollNoInput.value}</td>
+//             <td>
+//                 <button class="btn btn-sm btn-warning fw-bold edit">Edit</button>
+//                 <button class="btn btn-sm btn-danger fw-bold delete">Delete</button>
+//             </td>
+//         `;
 
-        list.appendChild(tr);
-    }
+//         list.appendChild(tr);
+//     }
 
-    // Clear input fields
-    userNameInput.value = "";
-    userEmailInput.value = "";
-    userRollNoInput.value = "";
-};
+//     // Clear input fields
+//     userNameInput.value = "";
+//     userEmailInput.value = "";
+//     userRollNoInput.value = "";
+// };
 
-list.addEventListener("click", (e) => {
-    let target = e.target;
+// list.addEventListener("click", (e) => {
+//     let target = e.target;
 
-    // Delete row
-    if (target.classList.contains("delete")) {
-        target.parentElement.parentElement.remove();
-    }
+//     // Delete row
+//     if (target.classList.contains("delete")) {
+//         target.parentElement.parentElement.remove();
+//     }
 
-    // Edit row
-    if (target.classList.contains("edit")) {
-        selectedRow = target.parentElement.parentElement;
+//     // Edit row
+//     if (target.classList.contains("edit")) {
+//         selectedRow = target.parentElement.parentElement;
 
-        let userNameResult = selectedRow.children[0];
-        let userEmailResult = selectedRow.children[1];
-        let userRollNoResult = selectedRow.children[2];
+//         let userNameResult = selectedRow.children[0];
+//         let userEmailResult = selectedRow.children[1];
+//         let userRollNoResult = selectedRow.children[2];
 
-        userNameInput.value = userNameResult.innerText;
-        userEmailInput.value = userEmailResult.innerText;
-        userRollNoInput.value = userRollNoResult.innerText;
+//         userNameInput.value = userNameResult.innerText;
+//         userEmailInput.value = userEmailResult.innerText;
+//         userRollNoInput.value = userRollNoResult.innerText;
 
-        document.getElementById("form-btn").innerText = "Save Changes";
-    }
-});
-
-
+//         document.getElementById("form-btn").innerText = "Save Changes";
+//     }
+// });
 
 //! For Crud Operation 
+
+//! For Object Practice
+
+// Singleton way
+// Object.create();
+
+// Object literals way
+
+// const userInput = prompt("Enter your name");
+
+// const userInput2 = Number(prompt("Enter your age"));
+
+// const userData = {
+    // name: "Abid",
+    // "full name": "Abid Khan",
+    // age: 17,
+    // isLoggedIn: true,
+    // lastLoggedIn: ["Mon", "Fri"]
+    // userName: userInput,
+    // userAge:userInput2
+    // userFunction: function greeting() {
+    //     return "Hello World"
+    // },
+// }
+
+// userData.Function2 = function () {
+//     return `Hello user , ${userData.name}`
+// }
+
+// First Way to access value
+// console.log(userData.name);
+// console.log(userData.age);
+// console.log(userData.isLoggedIn);
+
+// userData.lastLoggedIn.forEach((value) => {
+//     console.log(value);
+// })
+// First Way to access value
+
+// Second Way to access value
+// console.log(userData["full name"]);
+// Second Way to access value
+
+// userData.userName = userData.userName.toUpperCase();
+
+// if (userData.userName === userData.userName.toLowerCase()) {
+//     console.log(userData.userName);
+// } else {
+//     console.log("The value is uppercase");
+// }
+
+// console.log(userData.userAge);
+
+// console.log(userData.userFunction());
+
+// console.log(userData.userFunction2());
+
+//! For Object Practice
+
