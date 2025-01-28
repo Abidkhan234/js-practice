@@ -722,16 +722,16 @@
 // const userInput2 = Number(prompt("Enter your age"));
 
 // const userData = {
-    // name: "Abid",
-    // "full name": "Abid Khan",
-    // age: 17,
-    // isLoggedIn: true,
-    // lastLoggedIn: ["Mon", "Fri"]
-    // userName: userInput,
-    // userAge:userInput2
-    // userFunction: function greeting() {
-    //     return "Hello World"
-    // },
+// name: "Abid",
+// "full name": "Abid Khan",
+// age: 17,
+// isLoggedIn: true,
+// lastLoggedIn: ["Mon", "Fri"]
+// userName: userInput,
+// userAge:userInput2
+// userFunction: function greeting() {
+//     return "Hello World"
+// },
 // }
 
 // userData.Function2 = function () {
@@ -768,3 +768,349 @@
 
 //! For Object Practice
 
+//! For JS Array method Task
+
+//! Filter Tasks
+//? Task 1
+// let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const oddNums = nums.map((number) => {
+//     return number % 2 !== 0;
+// });
+
+// console.log(oddNums);
+
+//? Task 2
+
+// const people = [
+//     { name: "Alice", age: 17 },
+//     { name: "Bob", age: 22 },
+//     { name: "Charlie", age: 16 },
+//     { name: "David", age: 25 },
+//     { name: "Eve", age: 14 },
+// ];
+
+// const youngerPeople = people.filter((peoples) => {
+//     return peoples.age <= 18;
+// })
+
+// console.log(youngerPeople);
+
+//? Task 3
+
+// const strings = [
+//     "apple",
+//     "banana",
+//     "avocado",
+//     "grape",
+//     "orange",
+//     "blueberry",
+//     "apricot",
+//     "cherry",
+//     "mango",
+//     "strawberry"
+// ];
+
+// const startFromA = strings.filter((value)=>{
+//     if(value.charAt(0) === "a"){
+//         return value;
+//     }
+// });
+
+// console.log(startFromA);
+
+//? Task 4
+
+// const products = [
+//     { name: "Laptop", price: 1500 },
+//     { name: "Phone", price: 800 },
+//     { name: "Tablet", price: 1200 },
+//     { name: "Smartwatch", price: 500 },
+//     { name: "Headphones", price: 200 },
+// ];
+
+// const ExpProducts = products.filter((value, index) => {
+//     if (value.price >= 1000) {
+//         return value.price;
+//     }
+// });
+
+// console.log(ExpProducts);
+
+//? Task 5
+
+// const strings = [
+//     "apple",
+//     "banana",
+//     "avocado",
+//     "grape",
+//     "orange",
+//     "blueberry",
+//     "apricot",
+//     "cherry",
+//     "mango",
+//     "strawberry"
+// ];
+
+// const longString = strings.filter((value) => {
+//     if (value.length > 5) {
+//         return value;
+//     }
+// })
+
+// console.log(longString);
+
+//! Filter Tasks
+
+//! Map Tasks 
+
+//? Task 1
+
+// const numbers = [12, 5, 8, 130, 44, 7, 23, 90, 3, 17];
+
+// const copyNum = numbers.map((value) => {
+//     return value ** 2;
+// })
+
+// console.log(copyNum);
+
+//? Task 2
+
+// const names = ["alice", "bob", "charlie", "david", "eve", "frank", "grace", "hannah", "isaac", "jack"];
+
+// const UpperName = names.map((value) => {
+//     return value.toUpperCase();
+// });
+
+// console.log(names);
+
+// console.log(UpperName);
+
+//? Task 3
+
+// const people = [
+//     { name: "Alice", age: 17 },
+//     { name: "Bob", age: 22 },
+//     { name: "Charlie", age: 16 },
+//     { name: "David", age: 25 },
+//     { name: "Eve", age: 14 },
+// ];
+
+// const onlyAge = people.map((value) => {
+//     return value.age;
+// })
+
+// console.log(people);
+
+// console.log(onlyAge);
+
+//? Task 4
+
+// const prices = [299, 499, 1200, 150, 899, 2499, 75, 1999, 349, 450];
+
+// const updatedPrices = prices.map((value) => {
+//     return Math.ceil(value + value * 0.1);
+// })
+
+// console.log(prices);
+
+// console.log(updatedPrices);
+
+//? Task 5
+
+// const programmingLanguages = [
+//     "javascript",
+//     "python",
+//     "java",
+//     "c++",
+//     "ruby",
+//     "go",
+//     "swift",
+//     "typescript",
+//     "php",
+//     "kotlin"
+// ];
+
+// const afterAppending = programmingLanguages.map((value) => {
+//     return `${value} JS`
+// });
+
+// console.log(programmingLanguages);
+
+// console.log(afterAppending);
+
+//! Map Tasks
+
+//! Filter and Map Tasks
+
+//? Task 1
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// const filterEvenSquare = (nums) => {
+//     return nums.filter((item) => item % 2 === 0).map((item) => item ** 2);
+// }
+
+// const updatedNum = filterEvenSquare(nums);
+
+// console.log(nums);
+
+// console.log(updatedNum);
+
+//? Task 2
+
+// const people = [
+//     { name: "Alice", age: 17 },
+//     { name: "Bob", age: 22 },
+//     { name: "Charlie", age: 16 },
+//     { name: "David", age: 25 },
+//     { name: "Eve", age: 14 },
+// ];
+
+// const updatedPeople = (people) => {
+//     return people.filter((value) => value.age > 18).map((value) => value.name);
+// }
+
+// const updatedPeople2 = (people) => {
+//     return people.filter((value) => value.age < 18).map((value) => value.name)
+// };
+
+// const adultPeople = updatedPeople(people);
+
+// const youngerPeople = updatedPeople2(people);
+
+// console.log(people);
+
+// console.log(adultPeople);
+
+// console.log(youngerPeople);
+
+//? Task 3
+
+// const prices = [299, 499, 1200, 150, 899, 2499, 75, 1999, 349, 450];
+
+// const cheaperProducts = (prices) => {
+//     return prices.filter((item) => item > 1000).map((item) => Math.round(item + item * 0.2));
+// }
+
+// const result = cheaperProducts(prices);
+
+// console.log(prices);
+
+// console.log(result);
+
+//? Task 4
+
+// const strings = [
+//     "apple",
+//     "banana",
+//     "avocado",
+//     "grape",
+//     "orange",
+//     "blueberry",
+//     "apricot",
+//     "cherry",
+//     "mango",
+//     "strawberry"
+// ];
+
+// const longerThanSixCha = (strings) => {
+//     return strings.filter((item) => item.length > 6).map((item) => item.toUpperCase())
+// }
+
+// const result = longerThanSixCha(strings);
+
+// console.log(strings);
+
+// console.log(result);
+
+//? Task 5
+
+
+// const users = [
+//     { username: "user1", isActive: true },
+//     { username: "user2", isActive: false },
+//     { username: "user3", isActive: true },
+//     { username: "user4", isActive: false },
+//     { username: "user5", isActive: true },
+// ];
+
+// const activeUser = (user) => {
+
+//     return user.filter((item) => {
+//         return item.isActive === true;
+//     }).map((item) => {
+//         return item.username;
+//     });
+
+// }
+
+// const result = activeUser(users);
+
+// console.log(users);
+
+// console.log(result);
+
+//! Filter and Map Tasks
+
+//! For JS Array method Practice
+
+//! For API Practice start
+
+// const startBtn = document.getElementById("start");
+
+// const stopBtn = document.getElementById("stop");
+
+// const hexCodeFunc = () => {
+//     let hexFormat = Math.floor(Math.random() * 16777215).toString(16);
+//     let hexCode = `#${hexFormat.padStart(6, "0")}`;
+//     document.querySelector(".back-ground-color").style.backgroundColor = hexCode
+// };
+
+// let flag = null;
+
+// startBtn.addEventListener("click", () => {
+//     hexCodeFunc();
+//     flag = setInterval(hexCodeFunc,1000)
+// })
+
+// stopBtn.addEventListener("click", () => {
+//     clearInterval(flag);
+// })
+
+//! For API Practice end
+
+//! For custom-Cursor start
+
+const innerBox = document.querySelector(".inner-box");
+
+innerBox.addEventListener("mousemove", (event) => {
+
+    let clientX = event.pageX;
+
+    let clientY = event.pageY;
+
+    const outerCircle = document.querySelector(".outer-circle");
+
+    const innerCircle = document.querySelector(".inner-circle");
+
+    innerCircle.style.left = `${clientX}px`;
+    innerCircle.style.top = `${clientY}px`;
+
+    // innerCircle.animate({
+    //     left:`${clientX}px`,
+    //     top:`${clientY}px`
+    // },{duration:500,fill:"backwards"})
+
+
+
+    outerCircle.style.left = `${clientX}px`;
+    outerCircle.style.top = `${clientY}px`;
+
+    outerCircle.animate({
+        left:`${clientX}px`,
+        top:`${clientY}px`
+    },{duration:500,fill:"backwards"})
+
+})
+
+//! For custom-Cursor end
